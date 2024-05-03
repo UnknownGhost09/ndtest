@@ -1,0 +1,403 @@
+{% extends 'sidebar.html' %}
+
+{% block content %}
+
+
+<div class="main-content">
+
+    <div class="page-content">
+        <div class="container-fluid">
+
+
+            <div class="row">
+                <div class="col-12">
+                    <div class="page-title-box d-sm-flex align-items-center justify-content-between">
+                        <h4 class="mb-sm-0 font-size-18">Dashboard</h4>
+
+                        <div class="page-title-right">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item"><a href="javascript: void(0);">Dashboard</a></li>
+                                <li class="breadcrumb-item text-black">Dashboard</li>
+                            </ol>
+                        </div>
+
+
+                     
+
+
+
+                    </div>
+                </div>
+            </div>
+
+
+                <!-- start page title -->
+                <div class="row">
+                    <div class="col-xl-4 col-md-6">
+                        <!-- card -->
+                        <div class="card card-h-100">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span class="text-muted mb-3 lh-1 d-block text-truncate">Total Devices</span>
+                                        <h4 class="mb-3">
+                                            <span class="counter-value" data-target="865">0</span>
+                                        </h4>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                    </div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="badge bg-soft-primary text-primary">+ 200</span>
+                                    <span class="ms-1 text-muted font-size-13">Since last week</span>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+
+                    <div class="col-xl-4 col-md-6">
+                        <!-- card -->
+                        <div class="card card-h-100">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span class="text-muted mb-3 lh-1 d-block text-truncate">Normal</span>
+                                        <h4 class="mb-3">
+                                            <span class="counter-value" data-target="6258">0</span>
+                                        </h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                    </div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="badge bg-soft-success text-success">+ 29 </span>
+                                    <span class="ms-1 text-muted font-size-13">Since last week</span>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col-->
+
+                    <div class="col-xl-4 col-md-6">
+                        <!-- card -->
+                        <div class="card card-h-100">
+                            <!-- card body -->
+                            <div class="card-body">
+                                <div class="row align-items-center">
+                                    <div class="col-6">
+                                        <span class="text-muted mb-3 lh-1 d-block text-truncate">Anomaly</span>
+                                        <h4 class="mb-3">
+                                            <span class="counter-value" data-target="3">0</span>
+                                        </h4>
+                                    </div>
+                                    <div class="col-6">
+                                        <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                    </div>
+                                </div>
+                                <div class="text-nowrap">
+                                    <span class="badge bg-soft-danger text-danger">+2</span>
+                                    <span class="ms-1 text-muted font-size-13">Since last week</span>
+                                </div>
+                            </div><!-- end card body -->
+                        </div><!-- end card -->
+                    </div><!-- end col -->
+
+               
+                </div><!-- end row-->
+               
+
+
+                <div class='row'>
+                    <div class="col-xl-8 col-md-12 col-sd-12">
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='card-title mb-0 flex-grow-1'>Packets Flow</h5>
+                            </div>
+                            <div class='card-body'>
+                        <div id='chart'></div>
+                    </div>
+                    </div>
+
+
+
+                    </div>
+                 
+
+
+
+                    <div class="col-xl-4 col-md-6 col-sd-12">
+                        <div class="card">
+                            <div class="card-header align-items-center d-flex">
+                                <h5 class="card-title mb-0 flex-grow-1">Alerts Activity</h5>
+                                <div class="flex-shrink-0">
+                                    <select class="form-select form-select-sm mb-0 my-n1">
+                                        <option value="Today" selected="">Today</option>
+                                        <option value="Yesterday">Yesterday</option>
+                                        <option value="Week">Last Week</option>
+                                        <option value="Month">Last Month</option>
+                                    </select>
+                                </div>
+                            </div><!-- end card header -->
+
+                            <div class="card-body px-0 max">
+                    
+                                    <ul class="list-unstyled activity-wid mb-0">
+
+                                        <li class="activity-list">
+                                         
+                                            <div class="timeline-list-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1 overflow-hidden me-4">
+                                                        <h5 class="font-size-14 mb-1">24/05/2021, 18:24:56</h5>
+                                                        <p class="text-truncate text-muted font-size-13">192.198.1.1</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end me-3">
+                                                        <h5 class="mb-1"><span class='badge bg-soft-danger text-danger'>Anomaly</span></h5>
+                                                     
+                                                    </div>
+
+                                               
+                                                </div>
+                                            </div> 
+                                        </li>
+
+                                        <li class="activity-list">
+                                      
+                                            <div class="timeline-list-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1 overflow-hidden me-4">
+                                                        <h5 class="font-size-14 mb-1">24/05/2021, 18:24:56</h5>
+                                                        <p class="text-truncate text-muted font-size-13">192.198.1.1</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end me-3">
+                                                        <h5 class="mb-1"><span class='badge bg-soft-danger text-danger'>Anomaly</span></h5>
+
+                                                    </div>
+
+                                                
+                                                </div>
+                                            </div> 
+                                        </li>
+
+                                        <li class="activity-list">
+                                 
+                                            <div class="timeline-list-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1 overflow-hidden me-4">
+                                                        <h5 class="font-size-14 mb-1">24/05/2021, 18:24:56</h5>
+                                                        <p class="text-truncate text-muted font-size-13">192.198.1.1</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end me-3">
+                                                        <h5 class="mb-1"><span class='badge bg-soft-danger text-danger'>Anomaly</span></h5>
+
+                                                    </div>
+
+                                                 
+                                                </div>
+                                            </div> 
+                                        </li>
+    
+                                        <li class="activity-list">
+                                      
+                                            <div class="timeline-list-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1 overflow-hidden me-4">
+                                                        <h5 class="font-size-14 mb-1">24/05/2021, 18:24:56</h5>
+                                                        <p class="text-truncate text-muted font-size-13">192.198.1.1</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end me-3">
+                                                        <h5 class="mb-1"><span class='badge bg-soft-danger text-danger'>Anomaly</span></h5>
+                                                
+                                                    </div>
+
+                                                
+                                                </div>
+                                            </div> 
+                                        </li>
+
+
+                                        <li class="activity-list">
+                                      
+                                            <div class="timeline-list-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1 overflow-hidden me-4">
+                                                        <h5 class="font-size-14 mb-1">24/05/2021, 18:24:56</h5>
+                                                        <p class="text-truncate text-muted font-size-13">192.198.1.1</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end me-3">
+                                                        <h5 class="mb-1"><span class='badge bg-soft-danger text-danger'>Anomaly</span></h5>
+                                                      
+                                                    </div>
+
+                                                  
+                                                </div>
+                                            </div> 
+                                        </li>
+
+                                        <li class="activity-list">
+                                          
+                                            <div class="timeline-list-item">
+                                                <div class="d-flex">
+                                                    <div class="flex-grow-1 overflow-hidden me-4">
+                                                        <h5 class="font-size-14 mb-1">24/05/2021, 18:24:56</h5>
+                                                        <p class="text-truncate text-muted font-size-13">192.198.1.1</p>
+                                                    </div>
+                                                    <div class="flex-shrink-0 text-end me-3">
+                                                        <h5 class="mb-1"><span class='badge bg-soft-danger text-danger'>Anomaly</span></h5>
+                                                        
+                                                    </div>
+
+                                             
+                                                </div>
+                                            </div> 
+                                        </li>
+                                    </ul>
+                                </div>    
+                            </div>
+                            <!-- end card body -->
+                        </div>
+                        <!-- end card -->
+                    </div>
+                    <!-- end col -->
+                </div>
+                <div class='row'>
+                    <div class="col-12">
+                        <div class='card'>
+                            <div class='card-header'>
+                                <h5 class='card-title mb-0 flex-grow-1'>Device Lists</h5>
+                            </div>
+                            <div class='card-body'>
+                        <div class='table-responsive'>
+                            <table id='test' class="table hover table-borderless dt-responsive nowrap w-100 text-nowrap">
+
+
+                                <thead>
+                                    <tr>
+                                        <th scope='col' class='text-dark'>Type</th>
+                                        <th scope='col'>Src Ip</th>
+                                        <th scope='col'>Dst Ip</th>
+                                        <th scope='col'>Src bytes</th>
+                                        <th scope='col'>Dst bytes</th>
+                                        <th scope='col'>Duration</th>
+                                        <th scope='col'>Same SRV Rate</th>
+                                        <th scope='col'>Different SRV Rate</th>
+                                        <th scope='col'>DST host srv count</th>
+                                        <th scope='col'>Dst host same srv rate</th>
+                                        <th scope='col'>Dst host same src port rate</th>
+                                    </tr>
+
+                                </thead>
+
+
+                           
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    </div>
+                </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% comment %} <script src="https://cdn.socket.io/4.7.4/socket.io.min.js" integrity="sha384-Gr6Lu2Ajx28mzwyVR8CFkULdCU7kMlZ9UthllibdOSo6qAiN+yXNHqtgdTvFXMT4" crossorigin="anonymous"></script> {% endcomment %}
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<script>
+
+
+ // this should be pong
+    
+
+
+    
+      
+ const options = {
+    series: [{
+        name: 'packetChart',
+        data: [44,60]
+    }],
+    chart: {
+        type: 'bar',
+        height: 350
+    },
+    plotOptions: {
+        bar: {
+            horizontal: false,
+            columnWidth: '55%',
+            endingShape: 'rounded',
+        },
+    },
+    dataLabels: {
+        enabled: false
+    },
+    stroke: {
+        show: true,
+        width: 2,
+        colors: ['#6B6FC8']
+    },
+    xaxis: {
+        categories: ['src_bytes',"dst_bytes"],
+    },
+    yaxis: {
+        title: {
+            text: ''
+        }
+    },
+    fill: {
+        opacity: 1,
+        colors: ['#6B6FC8']
+    },
+    tooltip: {
+        y: {
+            formatter: function (val) {
+                return val;
+            }
+        }
+    }
+};
+
+const chart = new ApexCharts(document.querySelector("#chart"), options);
+chart.render();
+
+const ws = new WebSocket('ws://127.0.0.1:8000/ws/');
+
+ws.onopen = function (e) {
+    console.log('WebSocket successfully connected.');
+};
+
+ws.onclose = function (e) {
+    console.log('WebSocket closed unexpectedly');
+};
+
+ws.onmessage = function (event) {
+    const data = JSON.parse(event.data);
+    console.log('Received data:', data);
+
+    const srcBytes = Number(data.src_bytes);
+    const dstBytes = Number(data.dst_bytes);
+
+
+    chart.updateSeries([{
+        data: [srcBytes,dstBytes]
+    }]);
+};
+
+
+      
+
+</script>
+
+
+
+
+{% endblock %}
